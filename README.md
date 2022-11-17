@@ -1,4 +1,4 @@
-# counter_7
+# Tugas 7
 1. Stateless widget adalah widget yang tidak memiliki state dan immutable(semua value di dalamnya adalah final), sedangkan stateful widget merupakan widget yang memiliki state dan mutable. 
 2. Widget yang saya pakai di proyek saya kali ini adalah Text untuk menampilkan counter dan genap/ganjil, Column yang digunakan untuk layout secara vertical, dan FloatingActionButton yang merupakan button untuk menambah dan mengurangi variabel counter.
 3. Fungsi dari setState() adalah untuk refresh state dari widget yang dilakukan ketika widgetnya berubah. Pada proyek saya kali ini variabel yang terdampak adalah warna, word, dan _counter
@@ -10,6 +10,19 @@ Referensi:
 2. https://docs.flutter.dev/development/ui/widgets-intro
 3. https://docs.flutter.dev/development/ui/interactive
 4. https://stackoverflow.com/questions/50431055/what-is-the-difference-between-the-const-and-final-keywords-in-dart
+
+# Tugas 8
+1. Navigator.push hanya memasukkan halaman ke dalam stack navigator, sedangkan Navigator.pushReplacement merubah head of stack navigator dengan halaman baru(melakukan pop terlebih dahulu dan kemudian push)
+2. Widget yang saya pakai di proyek saya kali ini adalah drawer yang digunakan untuk navigasi antara halaman counter_7, form, dan data, Text untuk menampilkan kata, TextFormField untuk input form, DropdownButton untuk pilih jenis, dan TextButton untuk submit form.
+3. onPressed, onLongpress, onHover, dll.
+4. Cara kerja Navigator dalam "mengganti" halaman(route) dari aplikasi flutter adalah sebagai stack yang terbuat dari halaman, ketika ingin menampilkan halaman baru maka push halaman ke dalam stack, jika ingin ke halaman sebelumnya maka harus pop halaman dari stack. Halaman yang ditampilkan sekarang adalah halaman pada head of stack
+5. 
+
+Referensi:
+1. https://api.flutter.dev/flutter/widgets/Navigator/pushReplacement.html
+2. https://docs.flutter.dev/development/ui/widgets-intro
+3. https://api.flutter.dev/flutter/material/ElevatedButton-class.html#onPressed
+4. https://docs.flutter.dev/cookbook/navigation/navigation-basics
 
 A new Flutter project.
 

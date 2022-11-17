@@ -56,7 +56,7 @@ class _MyDataPageState extends State<MyDataPage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: const <Widget>[
             Text('Hello World!'),
           ],
         ),
