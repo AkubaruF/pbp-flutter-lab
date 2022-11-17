@@ -16,7 +16,7 @@ Referensi:
 2. Widget yang saya pakai di proyek saya kali ini adalah drawer yang digunakan untuk navigasi antara halaman counter_7, form, dan data, Text untuk menampilkan kata, TextFormField untuk input form, DropdownButton untuk pilih jenis, dan TextButton untuk submit form.
 3. onPressed, onLongpress, onHover, dll.
 4. Cara kerja Navigator dalam "mengganti" halaman(route) dari aplikasi flutter adalah sebagai stack yang terbuat dari halaman, ketika ingin menampilkan halaman baru maka push halaman ke dalam stack, jika ingin ke halaman sebelumnya maka harus pop halaman dari stack. Halaman yang ditampilkan sekarang adalah halaman pada head of stack
-5. 
+5. Pertama dengan menggunakan widget drawer pada file main, form, dan dart, di dalam drawer terdapat 3 listtile yang berfungsi sebagai button yang akan menunjukkan ke halaman pada text listtile tersebut, pada halaman form terdapat 2 TextFormField untuk input judul dan nominal, 1 DropdownButton yang digunakan untuk memilih jenis, dan 1 TextButton untuk submit form dan menyimpan data yang telah diisi di TextFormField dan DropdownButton
 
 Referensi:
 1. https://api.flutter.dev/flutter/widgets/Navigator/pushReplacement.html

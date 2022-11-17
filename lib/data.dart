@@ -53,12 +53,29 @@ class _MyDataPageState extends State<MyDataPage> {
           ],
         ),
       ),
+      // https://api.flutter.dev/flutter/material/Card-class.html
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text('Hello World!'),
-          ],
+        child: Card(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              const ListTile(
+                leading: Icon(Icons.album),
+                title: Text('Beli Sate Pacil'),
+                subtitle: Text('15000'),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  TextButton(
+                    child: const Text('Pengeluaran'),
+                    onPressed: () {/* ... */},
+                  ),
+                  const SizedBox(width: 8),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

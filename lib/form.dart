@@ -12,11 +12,11 @@ class MyFormPage extends StatefulWidget {
 class _MyFormPageState extends State<MyFormPage> {
   final _formKey = GlobalKey<FormState>();
   String namaLengkap = "";
-  String nominal = '0';
+  int nominal = 0;
   String jenis = "Pengeluaran";
   List<String> listJenis = ['Pengeluaran', 'Pemasukan'];
   List<String> dataNama = [''];
-  List<String> dataNominal = [''];
+  List<int> dataNominal = [0];
   List<String> dataJenis = [''];
 
   void saveData() {
@@ -115,9 +115,10 @@ class _MyFormPageState extends State<MyFormPage> {
                     return null;
                   },
                 ),
+                const SizedBox(width: 8),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: "Judul",
+                    hintText: "Nominal",
                     labelText: "Nominal",
                     // // Menambahkan icon agar lebih intuitif
                     // icon: const Icon(Icons.people),
@@ -129,13 +130,13 @@ class _MyFormPageState extends State<MyFormPage> {
                   // Menambahkan behavior saat nama diketik
                   onChanged: (String? value) {
                     setState(() {
-                      nominal = value!;
+                      nominal = int.parse(value!);
                     });
                   },
                   // Menambahkan behavior saat data disimpan
                   onSaved: (String? value) {
                     setState(() {
-                      nominal = value!;
+                      nominal = int.parse(value!);
                     });
                   },
                   // Validator sebagai validasi form
@@ -146,6 +147,7 @@ class _MyFormPageState extends State<MyFormPage> {
                     return null;
                   },
                 ),
+                const SizedBox(width: 8),
                 ListTile(
                   trailing: DropdownButton(
                     value: jenis,
@@ -163,6 +165,7 @@ class _MyFormPageState extends State<MyFormPage> {
                     },
                   ),
                 ),
+                const SizedBox(width: 8),
                 TextButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.blue),
