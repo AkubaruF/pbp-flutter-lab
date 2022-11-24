@@ -1,5 +1,6 @@
-import 'package:counter_7/form.dart';
-import 'package:counter_7/data.dart';
+import 'package:counter_7/page/form.dart';
+import 'package:counter_7/page/data.dart';
+import 'package:counter_7/page/watchlistpage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -72,6 +73,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.\
 
+      print("object");
+
       double intTemp = _counter + 1;
       // Genap
       if (intTemp % 2 == 0) {
@@ -95,6 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
+      print("object");
       double intTemp = _counter - 1;
       if (intTemp <= 0) {
         warna = Colors.red;
@@ -162,6 +166,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
             ),
+            ListTile(
+              title: const Text('My Watch List'),
+              onTap: () {
+                // Route menu ke halaman form
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const WatchlistPage()),
+                );
+              },
+            ),
           ],
         ),
       ),
@@ -180,6 +195,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             FloatingActionButton(
+              heroTag: null,
               onPressed: _decrementCounter,
               tooltip: 'decrement',
               child: const Icon(Icons.remove),
@@ -188,6 +204,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        heroTag: null,
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
