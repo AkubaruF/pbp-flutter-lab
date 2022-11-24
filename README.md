@@ -25,10 +25,10 @@ Referensi:
 4. https://docs.flutter.dev/cookbook/navigation/navigation-basics
 
 # Tugas 9
-1. Pengambilan data JSON dapat dilakukan tanpa membuat model terlebih dahulu dengan menggunakan function jsonDecode(), namun hal ini tidak baik daripada membuat model sebelum melakukan pengambilan data JSON karena hanya akan mengetahui tipe value ketika runtime sehingga tidak dapat menggunakan type safety, autocompletion, dan compile-tim exception. Kodenya akan lebih rawan terhadap error
+1. Pengambilan data JSON dapat dilakukan tanpa membuat model terlebih dahulu dengan menggunakan function jsonDecode(), namun hal ini tidak baik daripada membuat model sebelum melakukan pengambilan data JSON karena hanya akan mengetahui tipe value ketika runtime sehingga tidak dapat menggunakan type safety, autocompletion, dan compile-tim exception. Kodenya akan lebih rawan terhadap error.
 2. Widget yang saya pakai di proyek saya kali ini adalah drawer yang digunakan untuk navigasi ke halaman watchlist, Text untuk menampilkan judul film, dan FutureBuilder yang digunakan untuk menampilkan data watchlist ketika datanya sudah terambil.
-3. Mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter adalah pertama kita harus membuat model dari web service yang ingin kita request, lalu kita request ke web service tersebut dengan method GET yang akan mengembalikkan JSON, setelah itu kita harus konversi data dengan method fromJson agar flutter mengenali JSON tersebut sebagai objek class dari JSON tersebut, dan akhirnya kita dapat menggunakan data dari JSON untuk ditampilkan pada flutter dengan menggunakan FutureBuilder
-4. 
+3. Mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter adalah pertama kita harus membuat model dari web service yang ingin kita request, lalu kita request ke web service tersebut dengan method GET yang akan mengembalikkan JSON, setelah itu kita harus konversi data dengan method fromJson agar flutter mengenali JSON tersebut sebagai objek class dari JSON tersebut, dan akhirnya kita dapat menggunakan data dari JSON untuk ditampilkan pada flutter dengan menggunakan FutureBuilder.
+4. Cara saya mengimplementasikan checklist di atas adalah dengan pertama membuat file dart baru dengan nama watchlistpage.dart dan membuat tombol navigasi baru pada drawer halaman lain yang akan menunjukkan ke halaman watchlist, Kedua saya membuat model dari JSON tugas 3 saya dengan link https://tugas2-lab1.herokuapp.com/mywatchlist/json/ dengan menggunakan Quicktype, dan terakhir saya mengambil data pada tugas 3 dengan menggunakan http.get dan menampilkan data fields.title dengan menggunakan FutureBuilder.
 
 Referensi:
 1. https://docs.flutter.dev/development/data-and-backend/json
